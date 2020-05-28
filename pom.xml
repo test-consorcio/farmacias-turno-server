@@ -9,8 +9,8 @@
 		<version>2.2.7.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>prueba-mobdev</groupId>
-	<artifactId>breeds-server</artifactId>
+	<groupId>consorcio</groupId>
+	<artifactId>farmacias-turno-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>breeds-server</name>
 	<description>Demo project for Spring Boot</description>
