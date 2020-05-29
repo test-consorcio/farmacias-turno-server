@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Order(2)
-public class RequestResponseLoggingFilter implements Filter {
+public class WebFilter implements Filter {
 
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
@@ -23,6 +23,9 @@ public class RequestResponseLoggingFilter implements Filter {
 		HttpServletResponse httpServletResponse = (HttpServletResponse) response;
 
 		httpServletResponse.setHeader("Access-Control-Allow-Origin", "*");
+
+		httpServletResponse.setHeader("Access-Control-Allow-Headers",
+				"X-Requested-With, Content-Type, Authorization, Origin, Accept, Access-Control-Request-Method, Access-Control-Request-Headers");
 
 		chain.doFilter(request, response);
 
