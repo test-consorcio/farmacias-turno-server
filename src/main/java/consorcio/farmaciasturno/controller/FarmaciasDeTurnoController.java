@@ -23,7 +23,7 @@ public class FarmaciasDeTurnoController {
 	private Logger logger = LoggerFactory.getLogger(FarmaciasDeTurnoController.class);
 
 	@Autowired
-	@Qualifier("breedsServiceImpl")
+	@Qualifier("farmaciasDeTurnoServiceImpl")
 	private IFarmaciasDeTurnoService iFarmaciasDeTurnoService;
 
 	@GetMapping(value = "/listarcomunasporregion/{regionId}", produces = MediaType.TEXT_HTML_VALUE)
@@ -52,7 +52,8 @@ public class FarmaciasDeTurnoController {
 
 		try {
 
-			List<LinkedHashMap<String, String>> listaFarmacias = iFarmaciasDeTurnoService.obtenerFarmaciasTurno(comunaId);
+			List<LinkedHashMap<String, String>> listaFarmacias = iFarmaciasDeTurnoService
+					.obtenerFarmaciasTurno(comunaId);
 
 			return new ResponseEntity<>(listaFarmacias, HttpStatus.OK);
 

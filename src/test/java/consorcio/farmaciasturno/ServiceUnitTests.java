@@ -27,7 +27,7 @@ public class ServiceUnitTests {
 	private static final String COMUNA_ID = "87";
 
 	@Autowired
-	@Qualifier("breedsServiceImpl")
+	@Qualifier("farmaciasDeTurnoServiceImpl")
 	private IFarmaciasDeTurnoService breedsService;
 
 	@Test
